@@ -14,7 +14,7 @@
 
 ## built by
 
-Russell Gundani
-Valentine Musvipwa
-Prayer Chimboza
-Maxwell Chituku
+Russell Gundani,
+Valentine Musvipwa,
+Prayer Chimboza,
+Maxwell Chituku,
