@@ -1,29 +1,15 @@
-/*
-Copyright 2021 The Matrix.org Foundation C.I.C.
+export class SSOLoginHelper {
+   private _homeserver: string;
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+   constructor(homeserver: string) {
+      this._homeserver = homeserver;
+   }
 
-    http://www.apache.org/licenses/LICENSE-2.0
+   get homeserver(): string {
+      return this._homeserver;
+   }
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
-
-export class SSOLoginHelper{
-    private _homeserver: string;
-
-    constructor(homeserver: string) {
-        this._homeserver = homeserver;
-    }
-
-    get homeserver(): string { return this._homeserver; }
-
-    createSSORedirectURL(returnURL: string): string {
-        return `${this._homeserver}/_matrix/client/r0/login/sso/redirect?redirectUrl=${encodeURIComponent(returnURL)}`;
-    }
+   createSSORedirectURL(returnURL: string): string {
+      return `${this._homeserver}/_matrix/client/r0/login/sso/redirect?redirectUrl=${encodeURIComponent(returnURL)}`;
+   }
 }
